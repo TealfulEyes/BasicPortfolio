@@ -1,1 +1,123 @@
-<!-- SAMPLE GALLERY WILL GO HERE -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/galleries.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="scripts/navigation.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title> 
+</head>
+<body>
+
+<!--  HEADER -->
+<div>
+  <p id="title">
+    TITLE HERE
+  </p>
+  <p id="Subtitle">
+    Subtitle here
+  </p>
+</div>
+
+<!--DESKTOP NAVIGATION -->
+<div id="desktop" class="desktopnav">
+  <a href="index.html">ABOUT</a> |
+  <a href="gallery2.html">GALLERY</a> 
+</div>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <p class="responsive">Logo</p>
+  <!-- Navigation links (hidden by default) -->
+  <div id="navlinks">
+    <a href="index.html">ABOUT</a>
+    <a href="gallery2.html">GALLERY</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </a>
+</div>
+
+<!--BODY-->
+
+
+ <!-- THUMBNAILS FOR OPENING THE LIGHTBOX ON THE IMAGE THE USER WANTS TO SEE MORE OF -->
+<div class="thumbnails">
+
+
+    <img src="images/Thumb1.png" onclick="openLightbox();currentSlide(1)" class="hover-shadow">
+
+    <img src="images/Thumb2.png" onclick="openLightbox();currentSlide(2)" class="hover-shadow">
+    <img src="images/Thumb3.png" onclick="openLightbox();currentSlide(3)" class="hover-shadow">
+    <img src="images/Thumb4.png" onclick="openLightbox();currentSlide(4)" class="hover-shadow">
+    <img src="images/Thumb5.png" onclick="openLightbox();currentSlide(5)" class="hover-shadow">
+    <img src="images/Thumb6.png" onclick="openLightbox();currentSlide(6)" class="hover-shadow">
+
+</div>
+
+<!-- THE LIGHTBOX -->
+<div id="theLightbox" class="lightbox">
+	<!-- CLOSE BUTTON -->
+  <span class="close cursor" onclick="closeLightbox()">&times;</span>
+  <!--LIGHTBOX CONTENT -->
+  <div class="lightbox-content">
+  <!--THIS IS WHERE YOUR FULL SIZE IMAGES WILL GO. REPEAT THE PATTERN BELOW FILLING IN THE IMAGE SOURCE, ALT TEXT, ETC... -->
+    <div class="slide">
+      <div class="numbertext">1 / 6</div>
+      <img class ="image"src="images/Sample1.png" style="width:100%" alt="CAPTION TEXT 1">
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">2 / 6</div>
+      <img class ="image" src="images/Sample2.png" style="width:100%" alt="CAPTION TEXT 2">
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">3 / 6</div>
+      <img class ="image" src="images/Sample3.png" style="width:100%" alt="CAPTION TEXT 3">
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">4 / 6</div>
+      <img class ="image" src="images/Sample4.png" style="width:100%" alt="CAPTION TEXT 4">
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">5 / 6</div>
+      <img class ="image" src="images/Sample5.png" style="width:100%" alt="CAPTION TEXT 5">
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">6 / 6</div>
+      <img class ="image" src="images/Sample6.png" style="width:100%" alt="CAPTION TEXT 6">
+    </div>
+
+    <!-- BUTTONS THAT CONTROL PREVIOUS AND NEXT IMAGE TO SHOW -->
+    <a class="prev" onclick="slideButtons(-1)">&#10094;</a>
+    <a class="next" onclick="slideButtons(1)">&#10095;</a>
+
+    <!-- CONTAINER FOR CAPTION TEXT THAT IS BASED OFF THE ALT TEXT OF IMAGES -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+ 
+</div>
+  </div>
+</div> 
+
+
+<!-- FOOTER -->
+<div id="footer" style="width: 100%;text-align: center; background-color: green;position: relative;">
+  FOOTER GOES HERE, GOOD FOR SOCIAL MEDIA LINKS OR GENERAL INFORMATION  
+</div>
+<!-- SCRIPT FOR THE LIGHTBOX TO FUNCTION, DON'T TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING -->
+<script src="scripts/gallery.js"></script>
+</body>
+
+</html>

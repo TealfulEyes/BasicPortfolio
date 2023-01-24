@@ -64,8 +64,7 @@
 }
 
 /* Style the active link (or home/logo) */
-.active {
-  background-color: teal;
+.responsive {
   color: white;
   margin: 14px 16px;
 } 
